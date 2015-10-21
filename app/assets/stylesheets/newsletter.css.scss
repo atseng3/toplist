@@ -1,0 +1,18 @@
+.form-newsletter {
+	height: 70px;
+	background: #D8D8D8;
+	padding: 15px 30px;
+	#email {
+		height: 40px;
+		width: 483px;
+		float: left;
+	}
+	.btn.btn-default {
+		height: 40px;
+		float: right;
+		background: #3B5998;
+		color: white;
+		font-weight: bold;
+		padding: 0px 25px;
+	}
+}

@@ -1,33 +1,15 @@
-<h1>Listing posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>User</th>
-      <th>Link</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% @posts.each do |post| %>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= post.user_id %></td>
-        <td><%= post.link %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  <div class="post">
+    <div class="post__user-avatar"></div> <div class="post__user-name">@atseng3</div>
+    <div class="post__thumbnail"></div>
+    <div class="post__title"><%= post.title %></div>
+    <div class="post__stats">
+      <span>3.1k approve</span>
+      <span>99 comments</span>
+    </div>
+    <button class="btn btn-default approve">APPROVE</button>
+    <button class="btn btn-default comment">COMMENT</button>
+  </div>
+<% end %>
