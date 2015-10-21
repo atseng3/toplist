@@ -9,6 +9,15 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap.min
  *= require_tree .
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	font-family: "Lato","HelveticaNeue-Regular","Helvetica Neue Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;	
+  background-color: #f5f5f5;
+}
