@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+@p = Post.new(title: '2 Best Distraction Videos While At Work', user_id: 1)
+@p.save
+
+@p = Post.new(title: '3 Most Motivational Quotes To Get You Excited About Work', user_id: 1)
+@p.save
+
+@p = Post.new(title: '3 Tips To Help You Burn More Fat During Workout', user_id: 1)
+@p.save
