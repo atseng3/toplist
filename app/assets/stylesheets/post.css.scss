@@ -1,6 +1,29 @@
 // post display page styling
 
+.user-info {
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+.user-avatar {
+	background: #CCC;
+	width: 40px;
+	height: 40px;
+	border-radius: 150px;
+	display: inline-block;
+}
+.user-name {
+	height: 40px;
+	font-size: 20px;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 40px;
+	vertical-align: top;
+}
+
 .show {
+	margin-top: 30px;
 	.post {
 		text-align: center;
 		background: white;
@@ -37,9 +60,35 @@
 		line-height: 40px;
 		vertical-align: top;
 	}
+	.post__stats {
+		display: inline-block;
+		font-size: 16px;
+		line-height: 40px;
+		height: 40px;
+		vertical-align: top;
+	}
+	.btn.btn-default.approve {
+		border: none;
+		float: right;
+
+	}
 	.post__body {
 		text-align: left;
 		// width: 80%;
 		margin: auto;
+	}
+}
+
+.show {
+	.new-comment {
+		background: white;
+		padding: 30px;
+	}
+}
+
+.show {
+	.comments {
+		background: white;
+		padding: 30px;
 	}
 }

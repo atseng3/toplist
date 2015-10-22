@@ -7,12 +7,13 @@
 		<div class="post__thumbnail"></div>
 		
 		<div class="post__info">
-			<div class="post__user-avatar"></div>&middot;
-			<div class="post__user-name">@sheryl2</div>
+			<div class="post__user-avatar"></div>
+			<div class="post__user-name">@sheryl2&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
 			<div class="post__stats">
+
 				<span>3.1k approve</span>
 			</div>
-			<button class="btn btn-default">APPROVE</button>
+			<button class="btn btn-default approve">APPROVE</button>
 		</div>
 		
 		<div class="post__body">
@@ -56,6 +57,32 @@
 				to get your business where it needs to go, rewarding the team members along the way.
 			</p>
 				
+		</div>
+	</div>
+</div>
+
+<div class="show container-fluid">
+	<div class="new-comment">
+		<h4>Add Comment</h4>
+		<%= form_tag '#', method: :get, class: "" do %>
+      <p>
+        <%= text_area_tag :comment, params[:comment], class: "form-control", placeholder: 'Add a comment' %>
+        <%= submit_tag "Submit", name: nil, class: "btn btn-default" %>
+      </p>
+    <% end %>
+	</div>
+</div>
+
+<div class="show container-fluid">
+	<div class="comments">
+		<div class="comment">
+			<div class="user-info">
+				<div class="user-avatar"></div>
+				<div class="user-name">@atseng3</div>
+			</div>
+			<p style="font-size: 20px;">
+				I love this list!
+			</p>
 		</div>
 	</div>
 </div>
