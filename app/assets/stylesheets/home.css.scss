@@ -23,7 +23,9 @@
 		}
 		.post__thumbnail {
 			width: 100%;
-			background: #CCC;
+			// background: #CCC;
+			background: image-url('panda.jpg');
+			background-size: contain;
 			height: 400px;
 		}
 		.post__title {
