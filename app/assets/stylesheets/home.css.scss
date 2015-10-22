@@ -1,0 +1,51 @@
+// homepage styling
+.home {
+	.post {
+		background: white;
+		padding: 20px 0px;
+		max-width: 600px;
+		margin: 30px auto;
+		.post__user-avatar {
+			margin-left: 20px;
+			background: #CCC;
+			width: 40px;
+			height: 40px;
+			border-radius: 150px;
+			display: inline-block;
+		}
+		.post__user-name {
+			margin-left: 10px;
+			height: 40px;
+			display: inline-block;
+			font-weight: bold;
+			line-height: 40px;
+			vertical-align: top;
+		}
+		.post__thumbnail {
+			width: 100%;
+			background: #CCC;
+			height: 400px;
+		}
+		.post__title {
+			font-size: 20px;
+			font-weight: bold;
+			margin: 25px 20px;
+		}
+		.post__stats {
+			margin: 20px;
+		  border-bottom: 1px solid #CCC;
+		  padding: 10px 0px;
+		}
+		.btn {
+			border: none;
+			background: transparent;
+			font-weight: bold;
+			margin: 0px 20px;
+			padding: 0px;
+		}
+		.btn:hover {
+			color: #3B5998;
+			text-decoration: underline;
+		}
+	}
+}

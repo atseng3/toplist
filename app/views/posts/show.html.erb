@@ -1,24 +1,61 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @post.link %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="show container-fluid">
+	<div class="post">
+		<h1><%= @post.title %></h1>
+		
+		<div class="post__thumbnail"></div>
+		
+		<div class="post__info">
+			<div class="post__user-avatar"></div>&middot;
+			<div class="post__user-name">@sheryl2</div>
+			<div class="post__stats">
+				<span>3.1k approve</span>
+			</div>
+			<button class="btn btn-default">APPROVE</button>
+		</div>
+		
+		<div class="post__body">
+			<h3>1. Total Body Movements.</h3>
+			<p>
+				At its core, success is about relationships. Involve customers and colleagues in the
+				creation of and direction of your busines pursuits. With them, set standards for the
+				work that needs to be accomplished in each person’s area of responsibility. Make 
+				these standards challenging but achievable. The result will be the high-level 
+				productivity and service you aim to perform. 
+			</p>
+			<p>
+				You can only go so far in business alone. You need others for your own success, 
+				empowerment and completeness. In business, choose your aims and equip your team
+				to get your business where it needs to go, rewarding the team members along the way.
+			</p>
+			<h3>2. Total Body Movements.</h3>
+			<p>
+				At its core, success is about relationships. Involve customers and colleagues in the
+				creation of and direction of your busines pursuits. With them, set standards for the
+				work that needs to be accomplished in each person’s area of responsibility. Make 
+				these standards challenging but achievable. The result will be the high-level 
+				productivity and service you aim to perform. 
+			</p>
+			<p>
+				You can only go so far in business alone. You need others for your own success, 
+				empowerment and completeness. In business, choose your aims and equip your team
+				to get your business where it needs to go, rewarding the team members along the way.
+			</p>
+			<h3>3. Total Body Movements.</h3>
+			<p>
+				At its core, success is about relationships. Involve customers and colleagues in the
+				creation of and direction of your busines pursuits. With them, set standards for the
+				work that needs to be accomplished in each person’s area of responsibility. Make 
+				these standards challenging but achievable. The result will be the high-level 
+				productivity and service you aim to perform. 
+			</p>
+			<p>
+				You can only go so far in business alone. You need others for your own success, 
+				empowerment and completeness. In business, choose your aims and equip your team
+				to get your business where it needs to go, rewarding the team members along the way.
+			</p>
+				
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+// post display page styling
+
+.show {
+	.post {
+		text-align: center;
+		background: white;
+		padding: 30px;
+		padding: 2% 10%;
+	}
+	.post__thumbnail {
+		// width: 80%;
+		height: 400px;
+		background: #CCC;
+		margin: auto;
+	}
+	.post__info {
+		text-align: left;
+		border-bottom: 1px solid #CCC;
+		padding: 20px 0px;
+	}
+	.post__user-avatar {
+		// text-align: left;
+		// margin-left: 20px;
+		background: #CCC;
+		width: 40px;
+		height: 40px;
+		border-radius: 150px;
+		display: inline-block;
+	}
+	.post__user-name {
+		// text-align: left;
+		// margin-left: 10px;
+		height: 40px;
+		font-size: 20px;
+		display: inline-block;
+		font-weight: bold;
+		line-height: 40px;
+		vertical-align: top;
+	}
+	.post__body {
+		text-align: left;
+		// width: 80%;
+		margin: auto;
+	}
+}
