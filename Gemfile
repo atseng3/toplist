@@ -31,6 +31,12 @@ gem 'jbuilder', '~> 1.2'
 # Image uploading gem
 gem 'carrierwave'
 
+# for likes/votes/approves
+gem 'acts_as_votable', '~> 0.10.0'
+
+# for comments on posts
+gem 'acts_as_commentable'
+
 # Using Amazon S3 
 gem 'fog'
 

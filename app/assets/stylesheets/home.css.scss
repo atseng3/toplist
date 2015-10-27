@@ -1,4 +1,7 @@
 // homepage styling
+
+// not working
+
 .home {
 	.post {
 		background: white;
@@ -24,10 +27,15 @@
 		.post__thumbnail {
 			width: 100%;
 			// background: #CCC;
-			background: image-url('panda.jpg');
-			background-size: contain;
+			background: image-url('panda.jpg') center no-repeat;
+			background-size: cover;
 			height: 400px;
 		}
+		@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+	.post__thumbnail {
+		height: 200px;
+	}
+}
 		.post__title {
 			font-size: 20px;
 			font-weight: bold;
