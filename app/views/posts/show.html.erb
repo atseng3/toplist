@@ -64,9 +64,12 @@
 <div class="show container-fluid">
 	<div class="new-comment">
 		<h4>Add Comment</h4>
-		<%= form_tag '#', method: :get, class: "" do %>
+		<%= form_tag comments_url, method: :post, class: "" do %>
       <p>
-        <%= text_area_tag :comment, params[:comment], class: "form-control", placeholder: 'Add a comment' %>
+        
+
+        <%= text_area(:comment, :comment, class: "form-control", placeholder: 'Add a Comment') %>
+        <input type="hidden" name="comment[post_id]" value=<%= @post.id %> />
         <%= submit_tag "Submit", name: nil, class: "btn btn-default" %>
       </p>
     <% end %>

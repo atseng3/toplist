@@ -2,6 +2,7 @@ Toplist::Application.routes.draw do
   
   devise_for :users
   resources :posts
+  resources :comments
 
   root 'posts#index'
 
