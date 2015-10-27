@@ -9,6 +9,7 @@ gem 'sqlite3', group: :development
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -57,6 +58,11 @@ gem 'searchkick'
 
 # For Tags
 gem 'acts-as-taggable-on', '~> 3.4'
+
+# for homepage pagination
+gem 'will_paginate', '~> 3.0.5'
+# for dummy posts
+gem 'betterlorem', '~> 0.1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

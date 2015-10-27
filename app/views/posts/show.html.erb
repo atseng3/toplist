@@ -11,7 +11,7 @@
 			<div class="post__user-name">@sheryl2&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
 			<div class="post__stats">
 
-				<span>3.1k approve</span>
+				<span><%= @post.votes_for.count %> approve</span>
 			</div>
 			<button class="btn btn-default approve">APPROVE</button>
 		</div>
@@ -74,7 +74,16 @@
 </div>
 
 <div class="show container-fluid">
-	<div class="comments">
+	<div class="comments">All Comments (<%= @post.comments.count %>)
+		<div class="comment">
+			<div class="user-info">
+				<div class="user-avatar"></div>
+				<div class="user-name">@atseng3</div>
+			</div>
+			<p style="font-size: 20px;">
+				I love this list!
+			</p>
+		</div>
 		<div class="comment">
 			<div class="user-info">
 				<div class="user-avatar"></div>

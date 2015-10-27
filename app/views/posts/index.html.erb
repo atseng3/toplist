@@ -6,8 +6,8 @@
       <div class="post__thumbnail"></div>
       <div class="post__title"><%= link_to post.title, post_path(post) %></div>
       <div class="post__stats">
-        <span>3.1k approve</span>
-        <span>99 comments</span>
+        <span><%= post.votes_for.count %> approve</span>
+        <span><%= post.comments.count %> comments</span>
       </div>
       <button class="btn btn-default approve">APPROVE</button>
       <button class="btn btn-default comment">COMMENT</button>
