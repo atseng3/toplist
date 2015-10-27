@@ -75,23 +75,16 @@
 
 <div class="show container-fluid">
 	<div class="comments">All Comments (<%= @post.comments.count %>)
-		<div class="comment">
-			<div class="user-info">
-				<div class="user-avatar"></div>
-				<div class="user-name">@atseng3</div>
-			</div>
-			<p style="font-size: 20px;">
-				I love this list!
-			</p>
-		</div>
-		<div class="comment">
-			<div class="user-info">
-				<div class="user-avatar"></div>
-				<div class="user-name">@atseng3</div>
-			</div>
-			<p style="font-size: 20px;">
-				I love this list!
-			</p>
-		</div>
+		<% @post.comments.each do |comment| %>
+			<div class="comment">
+				<div class="user-info">
+					<div class="user-avatar"></div>
+					<div class="user-name">@atseng3</div>
+				</div>
+				<!-- <p style="font-size: 20px;"> -->
+					<%= raw comment.comment %>
+				<!-- </p> -->
+			</div>	
+		<% end %>
 	</div>
 </div>

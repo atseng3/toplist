@@ -16,4 +16,17 @@
 # @p = Post.new(title: '3 Tips To Help You Burn More Fat During Workout', user_id: 1)
 # @p.save
 
-50.times { |i| Post.create(title: "Post #{i}", body: BetterLorem.p(5, false, false)) }
+# 50.times { |i| Post.create(title: "Post #{i}", body: BetterLorem.p(5, false, false)) }
+
+50.times do |i|
+	@p = Post.find(i+1)
+	comment = @p.comments.create
+	comment.title = 'Comment #{i}'
+	comment.comment = BetterLorem.p(1, false, false)
+	comment.save
+end
+
+# can't seed likes because each user can only like one time.
+# Post.all.each do |post|
+# 	post.
+# end
