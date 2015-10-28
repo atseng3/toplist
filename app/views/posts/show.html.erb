@@ -8,12 +8,13 @@
 		
 		<div class="post__info">
 			<div class="post__user-avatar"></div>
-			<div class="post__user-name">@sheryl2&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
+			<!-- <div class="post__user-name">@sheryl2&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div> -->
+			<div class="post__user-name">@<%= /^\w+/.match(@user.email) %>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
 			<div class="post__stats">
 
 				<span><%= @post.votes_for.count %> approve</span>
 			</div>
-			<button class="btn btn-default approve">APPROVE</button>
+			<a id="approve" class="approve">APPROVE</a>
 		</div>
 		
 		<div class="post__body">
@@ -90,3 +91,27 @@
 		<% end %>
 	</div>
 </div>
+
+<script type="text/javascript">
+$('#approve').click(function(event) {
+	event.preventDefault();
+	// debugger
+	var post_id = $('input[name="comment[post_id]"]').val();
+	$.ajax({
+		url: '/api/approve',
+		type: 'POST',
+		data: {
+			approve: {
+				post_id: post_id
+			}
+		},
+		success: function(data) {
+			alert('works!');
+			// need to change 'approve button' and update the approval count via javascript
+		},
+		error: function(error) {
+
+		}
+	});
+});
+</script>

@@ -1,4 +1,5 @@
 Toplist::Application.routes.draw do
+  post "api/approve"
   
   devise_for :users
   resources :posts

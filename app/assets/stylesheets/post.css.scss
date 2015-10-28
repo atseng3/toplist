@@ -70,10 +70,17 @@
 		height: 40px;
 		vertical-align: top;
 	}
-	.btn.btn-default.approve {
-		border: none;
+	.approve {
+		// border: none;
 		float: right;
-
+		text-decoration: none;
+		color: #333;
+		display: block;
+		font-weight: bold;
+	}
+	.approve:hover {
+		cursor: pointer;
+		
 	}
 	.post__body {
 		text-align: left;
