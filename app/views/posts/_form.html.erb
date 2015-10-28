@@ -1,3 +1,22 @@
+<div class="show container-fluid">
+  <div class="post">
+    <input placeholder="# Of Things You Want To Share With The World" value=""/>
+    <div class="post__thumbnail">COVER PHOTO</div>
+    <div class="post__info">
+      <div class="post__user-avatar"></div>
+      <div class="post__user-name">@sheryl2</div>
+    </div>
+
+    <div class="post__body">
+      <textarea rows="50" cols="100" placeholder="1. Title
+      Say a little something about this."></textarea>
+    </div>
+
+
+
+  </div>
+
+</div>
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">

@@ -62,31 +62,30 @@
 </div>
 
 <div class="show container-fluid">
-	<div class="new-comment">
-		<h4>Add Comment</h4>
-		<%= form_tag comments_url, method: :post, class: "" do %>
-      <p>
-        
-
-        <%= text_area(:comment, :comment, class: "form-control", placeholder: 'Add a Comment') %>
-        <input type="hidden" name="comment[post_id]" value=<%= @post.id %> />
-        <%= submit_tag "Submit", name: nil, class: "btn btn-default" %>
-      </p>
-    <% end %>
-	</div>
-</div>
-
-<div class="show container-fluid">
-	<div class="comments">All Comments (<%= @post.comments.count %>)
+	<div class="comments">
+		<div class="row comment-title">
+			All Comments (<%= @post.comments.count %>)
+		</div>
+		<div class="row new-comment">
+			<div class="user-avatar col-md-2 col-xs-4"></div>
+			<%= form_tag comments_url, method: :post, class: "col-md-10 col-xs-8" do %>
+	      <p>
+	        <%= text_area(:comment, :comment, class: "form-control", placeholder: 'Add a Comment') %>
+	        <input type="hidden" name="comment[post_id]" value=<%= @post.id %> />
+	        <%= submit_tag "Post", name: nil, class: "btn btn-default new-comment__submit" %>
+	      </p>
+	    <% end %>
+		</div>
 		<% @post.comments.each do |comment| %>
-			<div class="comment">
-				<div class="user-info">
-					<div class="user-avatar"></div>
-					<div class="user-name">@atseng3</div>
+			<div class="comment row">
+				<div class="user-avatar col-md-2 col-xs-4">
 				</div>
-				<!-- <p style="font-size: 20px;"> -->
-					<%= raw comment.comment %>
-				<!-- </p> -->
+				<div class="comment__content col-md-10 col-xs-8">
+					<div class="user-name">@atseng3</div>
+					<div class="comment__body">
+						<%= raw comment.comment %>
+					</div>
+				</div>
 			</div>	
 		<% end %>
 	</div>
