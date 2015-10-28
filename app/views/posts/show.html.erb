@@ -12,7 +12,7 @@
 			<div class="post__user-name">@<%= /^\w+/.match(@user.email) %>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</div>
 			<div class="post__stats">
 
-				<span><%= @post.votes_for.count %> approve</span>
+				<span id="post__approves"><%= @post.votes_for.count %></span> approve
 			</div>
 			<a id="approve" class="approve">APPROVE</a>
 		</div>
@@ -105,12 +105,10 @@ $('#approve').click(function(event) {
 				post_id: post_id
 			}
 		},
-		success: function(data) {
-			alert('works!');
-			// need to change 'approve button' and update the approval count via javascript
-		},
-		error: function(error) {
-
+		success: function(num_approvals) {
+			// update num_approvals upon success
+			var approve_el = document.getElementById('post__approves');
+			approve_el.innerHTML = num_approvals;
 		}
 	});
 });
