@@ -81,7 +81,7 @@
 				<div class="user-avatar col-md-2 col-xs-4">
 				</div>
 				<div class="comment__content col-md-10 col-xs-8">
-					<div class="user-name">@atseng3</div>
+					<div class="user-name">@atseng3</div> <%= time_ago_in_words(comment.created_at) %> ago
 					<div class="comment__body">
 						<%= raw comment.comment %>
 					</div>
